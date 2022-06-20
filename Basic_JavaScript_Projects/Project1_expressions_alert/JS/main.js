@@ -29,3 +29,7 @@ document.write("<br>")
 var m = "First string"
 var n = " and second string" 
 document.write(m + n); // Assigning two variables to two strings and concatenating them together
+
+function displayDate() {
+    document.getElementById(first_button).innerHTML = Date();
+}
