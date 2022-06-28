@@ -12,7 +12,7 @@ const Calculator = {
 
 //This modifies values each time a button is clicked on.
 function Input_Digit(digit) {
-    const {Dispay_Value, Wait_Second_Operand } = Calculator;
+    const {Display_Value, Wait_Second_Operand } = Calculator;
     //This checks if the Wait_Second_Operand is true and sets Display_Value
     //to the key that was clicked on.
     if (Wait_Second_Operand === true) {
@@ -21,7 +21,7 @@ function Input_Digit(digit) {
     } else {
         //This overwrites Display_Value if the current value is 0
         //otherwise it adds onto it.
-        Calculator.Display_Value = Dispay_Value === '0' ? digit : Dispay_Value + digit;
+        Calculator.Display_Value = Display_Value === '0' ? digit : Display_Value + digit;
     }
 }
 
@@ -41,11 +41,11 @@ function Input_Decimal(dot) {
 
 //This section handles operators
 function Handle_Operator(Next_Operator) {
-    const {First_Operand, Dispay_Value, operator} = Calculator;
+    const {First_Operand, Display_Value, operator} = Calculator;
     //When an operator key is pressed we convert the current number
     //displayed on the screen to a number and then store the result in
     //Calculator.First_Operand if it doesn't already exist.
-    const Value_of_Input = parseFloat(Dispay_Value);
+    const Value_of_Input = parseFloat(Display_Value);
     //Checks if an operator already exists and if Wait_Second_Operand is true,
     //then updates the operator and exits from the function.
     if (operator && Calculator.Wait_Second_Operand) {
@@ -96,10 +96,10 @@ function Update_Display() {
 Update_Display();
 //This section monitors button clicks
 const keys = document.querySelector('.calculator-keys');
-keys.addEventListener('click', (myevent) => {
-    //The target variable is an object taht represents the element
+keys.addEventListener('click', (event) => {
+    //The target variable is an object that represents the element
     //that was clicked
-    const { target } = myevent;
+    const { target } = event;
     //If the element that was clicked on is not a button, exit the function.
     if (!target.matches('button')) {
         return;
