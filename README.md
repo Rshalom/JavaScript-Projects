@@ -4,8 +4,11 @@
 
 ## Projects
 
-### - Pizza Menu: A functioning online Pizza Menu that calculates the cost of your order based on size and topping choices.
+- ### Pizza Menu: 
+A functioning online Pizza Menu that calculates the cost of your order based on size and topping choices.
 
-### - Calculator: A basic 4-function calculator.
+- ### Calculator: 
+A basic 4-function calculator.
 
-### - TicTacToe- A fully functioning online TicTacToe game. Play against the computer and see who wins!
+- ### TicTacToe:
+A fully functioning online TicTacToe game. Play against the computer and see who wins!
